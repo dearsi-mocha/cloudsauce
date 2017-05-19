@@ -13,20 +13,20 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Cloud Sauce - Journey towards a better cloud scale recipe
+title: Cloud Sauce - Journey towards better cloud scale recipes
 email: paymaun.heidari@microsoft.com
 description: > # this means to ignore newlines until "baseurl:"
   This blog is a personal journey of learnings in cloud scale software, 
   platform and technology. It is from the perspective of software development
   and engineering - which is also the intended audience. Much of the focus is
   on Azure technologies and open source.
-baseurl: "/digimaun/cloudsauce" # the subpath of your site, e.g. /blog
-url: "https://github.com" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  "@digimaun"
+baseurl: "/cloudsauce" # the subpath of your site, e.g. /blog
+url: "https://digimaun.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  digimaun
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-cayman
+theme: minima
 gems:
   - jekyll-feed
 exclude:
