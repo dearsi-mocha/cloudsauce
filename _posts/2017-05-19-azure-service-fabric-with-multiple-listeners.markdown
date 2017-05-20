@@ -66,7 +66,7 @@ protected override IEnumerable<ServiceReplicaListener> CreateServiceReplicaListe
 
 And respective snippet from ServiceManifest.xml
 
-`<Resources>
+<Resources>
   <Endpoints>
     <!-- This endpoint is used by the communication listener to obtain the port on which to 
          listen. Please note that if your service is partitioned, this port is shared with 
@@ -79,7 +79,7 @@ And respective snippet from ServiceManifest.xml
          file under the ConfigPackage. -->
     <Endpoint Name="ReplicatorEndpoint" />
   </Endpoints>
-</Resources>`
+</Resources>
 
 
 
