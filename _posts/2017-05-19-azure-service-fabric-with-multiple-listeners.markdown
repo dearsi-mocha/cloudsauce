@@ -12,32 +12,37 @@ i.e. overriding (in the case of a Stateful Service)
 
 One quite common scenario you might run into is the addition of >1 listener.
 
-Well in that case don't do this:
+Well in that case don't do this or you will have a bad time:
 
-`return new List<ServiceReplicaListener>()
+```
+return new List<ServiceReplicaListener>()
 {
     new ServiceReplicaListener( (context) => this.CreateServiceRemotingListener(context)),
     new ServiceReplicaListener( (context) => this.CreateServiceRemotingListener(context))
-};`
+};
+```
 
-Or you may likely run into a difficult to debug scenario where your fabric app is unable to succesfully deploy into your cluster and you are pulling your hair out trying to determine why!
+You will likely run into a difficult to debug scenario where your fabric app is unable to succesfully deploy into your cluster, your debugger is not attaching, and you are pulling your hair out trying to determine why!
 
 IF you are paying attention to your cluster diagnostics events -- at somepoint (too long for my taste!) you could get a clue to why the cluster state is unhealthy.
 
-
 Bingo:
-`Unhealthy event: SourceId='System.RA', Property='ReplicaOpenStatus', HealthState='Warning', ConsiderWarningAsError=false.
+
+```
+Unhealthy event: SourceId='System.RA', Property='ReplicaOpenStatus', HealthState='Warning', ConsiderWarningAsError=false.
 Replica had multiple failures in_Node_0 API call: IStatefulServiceReplica.ChangeRole(P); Error = System.Fabric.FabricElementAlreadyExistsException (-2146233088)
 Unique Name must be specified for each listener when multiple communication listeners are used
    at Microsoft.ServiceFabric.Services.Communication.ServiceEndpointCollection.AddEndpointCallerHoldsLock(String listenerName, String endpointAddress)
    at Microsoft.ServiceFabric.Services.Communication.ServiceEndpointCollection.AddEndpoint(String listenerName, String endpointAddress)
    at Microsoft.ServiceFabric.Services.Runtime.StatefulServiceReplicaAdapter.d__27.MoveNext()`
+```
 
 With respect to the current version of the Azure Service Fabric SDK, make sure the optional [Name] parameter is set to some unique value i.e. for 2 listeners `Foo1` and `Foo2`. Also both listeners (and unique name) is specified in the ServiceManifest.xml Resources>Endpoints>Endpoint declaration.
 
 Here is a more complete example using Kestrel with .NET Core:
 
-`/// <summary>
+```
+/// <summary>
 /// Optional override to create listeners (e.g., HTTP, Service Remoting, WCF, etc.) for this service replica to handle client or  user requests.
 /// </summary>
 /// <remarks>
@@ -62,10 +67,12 @@ protected override IEnumerable<ServiceReplicaListener> CreateServiceReplicaListe
                 .UseUrls(url)
                 .Build()),"ServiceEndpoint2")
     };
-}`
+}
+```
 
 And respective snippet from ServiceManifest.xml
 
+```
 <Resources>
   <Endpoints>
     <!-- This endpoint is used by the communication listener to obtain the port on which to 
@@ -80,6 +87,6 @@ And respective snippet from ServiceManifest.xml
     <Endpoint Name="ReplicatorEndpoint" />
   </Endpoints>
 </Resources>
-
+```
 
 
