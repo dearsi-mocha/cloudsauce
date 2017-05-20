@@ -14,7 +14,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Cloud Sauce - Journey towards better cloud scale recipes
-email: paymaun.heidari@microsoft.com
 description: > # this means to ignore newlines until "baseurl:"
   This blog is a personal journey of learnings in cloud scale software, 
   platform and technology. It is from the perspective of software development
