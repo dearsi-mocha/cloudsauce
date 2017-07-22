@@ -2,7 +2,7 @@
 layout: post
 title:  "preventing python c extension output"
 date:   2017-07-21 18:14:00 -0700
-categories: python c iot output redirection
+categories: python c output redirection iot
 ---
 
 Recently I ran into an issue while I was integrating an IoT python library into my application.
