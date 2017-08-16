@@ -2,7 +2,7 @@
 layout: post
 title:  "docker on windows mount source path permission denied"
 date:   2017-05-31 17:35:03 -0700
-categories: azure docker windows
+categories: docker windows mount permission
 ---
 
 Recently I was leveraging Azure App Services to deploy my Docker packaged .NET Core app. My setup includes VS 2017 v15.2, Docker CE v17.03.1-ce-win12 (stable) and Windows 10 Enterprise (with Creators update).
