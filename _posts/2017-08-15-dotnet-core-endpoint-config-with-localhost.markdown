@@ -52,9 +52,8 @@ The key here is to set your address
 
 
 Assuming your port mapping rules are correct (if you have any) that should solve the problem.
-
-
-
+  
+  
 References:
-- https://docs.microsoft.com/en-us/aspnet/core/fundamentals/hosting?tabs=aspnetcore1x
-- https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?tabs=aspnetcore1x#endpoint-configuration
+- [dotnet core hosting](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/hosting?tabs=aspnetcore1x)
+- [kestrel config](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?tabs=aspnetcore1x#endpoint-configuration)
