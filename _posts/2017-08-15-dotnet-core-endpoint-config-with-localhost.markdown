@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "dotnet core 1.x endpoint config with localhost"
+title:  "dotnet core 1.x endpoint routability with localhost binding"
 date:   2017-08-15 16:10:00 -0700
 categories: dotnet core kestrel endpoint binding
 ---
