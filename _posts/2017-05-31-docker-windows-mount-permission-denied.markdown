@@ -21,7 +21,7 @@ Re-sharing my local drive with Docker, I uncovered another error:
 Error: A firewall is blocking file Sharing between Windows and the containers. See documentation for more info.
 ```
 
-![docker error]({{ site.url }}/assets/dockerFirewall.PNG)
+![docker error]({{ site.baseurl }}/assets/dockerFirewall.PNG)
 
 I tried a number of times to share, including resetting cached credentials, using local credentials etc. No dice :(
 
