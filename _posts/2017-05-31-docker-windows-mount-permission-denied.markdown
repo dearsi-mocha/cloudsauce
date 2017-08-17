@@ -21,6 +21,8 @@ Re-sharing my local drive with Docker, I uncovered another error:
 Error: A firewall is blocking file Sharing between Windows and the containers. See documentation for more info.
 ```
 
+![docker error](/assets/dockerFirewall.PNG)
+
 I tried a number of times to share, including resetting cached credentials, using local credentials etc. No dice :(
 
 Of course looking at the documentation sent me down some bunny trails around making sure inbound firewall rules were setup correctly between the Host and VM processes.
