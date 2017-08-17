@@ -41,7 +41,9 @@ or you can pass a single string with semi-colon delimited urls i.e.
 
 OK thats great, but why is the endpoint not serving requests when it is deployed?
 
-The answer is _because of the loopback address_. This causes the server to only service requests coming from localhost. 
+The answer is _because of the loopback address_. This causes the server to only service requests coming from localhost.
+
+This behavior is not unique to dotnet.
 
 In fact, typically you'd want your firewall to drop packets with destination 127.0.0.1 for security reasons.
 
