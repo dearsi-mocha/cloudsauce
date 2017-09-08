@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "integrating a dotnetcore app into iot edge v1"
+title:  "dotnetcore app integration with iot edge v1"
 date:   2017-08-21 16:10:00 -0700
 categories: dotnetcore integration iot edge v1
 ---
