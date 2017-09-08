@@ -59,6 +59,7 @@ def block_stdout():
         yield
     finally:
         os.dup2(orig_stdout_fno, 1)
+        devnull.close()
 ```
 
 **Nice!** This is absolutely compact and reusable. The contextmanager will handle the setup then cleanup in the finally block. Now we can use it like this everywhere we need to

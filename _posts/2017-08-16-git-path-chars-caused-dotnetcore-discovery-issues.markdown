@@ -2,7 +2,7 @@
 layout: post
 title:  "visual studio project discovery issues due to git clone path"
 date:   2017-08-16 16:10:00 -0700
-categories: git clone path encoding visual studio dotnet core
+categories: git clone path encoding visual studio dotnetcore
 ---
 
 Here is a short and sweet headache causing issue with a resolution.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "integrating a dotnet core app into iot edge v1"
+title:  "integrating a dotnetcore app into iot edge v1"
 date:   2017-08-21 16:10:00 -0700
 categories: dotnetcore integration iot edge v1
 ---
@@ -11,7 +11,7 @@ The world of software changes fast, so keep in mind the versions of packages, mo
 
 I am going to assume you have familiarity with what IoT Edge is. Otherwise please refer to the IoT Edge overview link near the bottom of the post.
 
-We are going to focus on a dotnet core v1.1 app - these steps are what worked for me and my team. The great thing is the outlined steps should be similar for other runtimes and languages.  
+We are going to focus on a dotnetcore v1.1 app - these steps are what worked for me and my team. The great thing is the outlined steps should be similar for other runtimes and languages.  
 
 
 __Let's dive in...__
@@ -115,7 +115,7 @@ public async void Receive(Message received_message)
 }
 ```
 
-Thus far we have outlined steps for a mock application. We actually built a dotnet core app that had exposed REST endpoints, a websocket implementation (for nice push notifications on the front end) AND integration into IotHub for just-in-time device creation and message simulation.
+Thus far we have outlined steps for a mock application. We actually built a dotnetcore app that had exposed REST endpoints, a websocket implementation (for nice push notifications on the front end) AND integration into IotHub for just-in-time device creation and message simulation.
 
 To learn more about device management and how you can bring it to your app with practical examples checkout [this blog post](http://katngov.com/2017/08/24/iot-device-management-web-app/)!
 

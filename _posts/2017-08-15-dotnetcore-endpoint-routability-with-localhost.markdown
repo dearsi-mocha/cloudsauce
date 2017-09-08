@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "dotnet core 1.x endpoint routability with localhost binding"
+title:  "dotnetcore 1.x endpoint routability with localhost binding"
 date:   2017-08-15 16:10:00 -0700
-categories: dotnet core kestrel endpoint binding
+categories: dotnetcore kestrel endpoint binding
 ---
 
-Quite recently, I was integrating some components for a platform project I was involved with. Among the components was a dotnet core web app which was exposing an API endpoint. The endpoint was binding and serving requests properly locally, but not when it was deployed in a container on the remote host.
+Quite recently, I was integrating some components for a platform project I was involved with. Among the components was a dotnetcore web app which was exposing an API endpoint. The endpoint was binding and serving requests properly locally, but not when it was deployed in a container on the remote host.
 
 The solution to this issue was an `ohh of course...` (or `/sigh`) moment but it did take a chunk of time to resolve - so maybe some others out there could use the info, or at least recache and consider it a refresher.
  
@@ -57,5 +57,5 @@ Assuming your port mapping rules are correct (if you have any) that should solve
   
   
 References:
-- [dotnet core hosting](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/hosting?tabs=aspnetcore1x)
+- [dotnetcore hosting](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/hosting?tabs=aspnetcore1x)
 - [kestrel config](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?tabs=aspnetcore1x#endpoint-configuration)
