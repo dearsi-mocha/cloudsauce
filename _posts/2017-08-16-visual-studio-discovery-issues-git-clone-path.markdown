@@ -7,7 +7,7 @@ categories: git clone path encoding visual studio dotnetcore
 
 Here is a short and sweet headache causing issue with a resolution.
 
-When you are git cloning a project to work on, particularly when you aren't providing a clone folder argument, make sure you remove or replace special characters such as url encoding ones like %20 from the path.
+When you are git cloning a project to work on, particularly when you aren't providing a clone folder argument, **make sure you remove or replace special characters such as url encoding ones like %20 from the path.**
 
 Otherwise visual studio will have issues discovering project artifacts...you know, important things like .cs files. 
 

@@ -20,7 +20,7 @@ First create a new dotnet core project.
 
 Add the following package reference, either directly to the .csproj or through the nuget interface
 
-```
+```xml
 <PackageReference Include="Microsoft.Azure.Devices.Gateway.Module.NetStandard" Version="1.0.5" />
 ```
 *Note*: Please use the latest version of the package available to you.
@@ -44,7 +44,7 @@ Now lets build a concrete class implementing the edge inteface. We will build ou
 
 You should have a .cs file that looks similar to this
 
-```
+```cs
 using Microsoft.Azure.Devices.Gateway;
 
 public class ExampleAppEdge : IGatewayModule, IGatewayModuleStart
@@ -78,7 +78,7 @@ Let's circumvent that with a workaround which is to execute `IWebHost.Run()` in 
 
 So our Create now looks like 
 
-```
+```cs
 public void Create(Broker broker, byte[] configuration)
 {
     Console.WriteLine("ExampleApp.Create called!");
@@ -94,7 +94,7 @@ You'll notice the `<Message>` type param the method expects. For receiving messa
 
 Here is a basic implementation of Receive, also taking advantage of async
 
-```
+```cs
 public async void Receive(Message received_message)
 {
     Console.WriteLine("ExampleApp.Receive called!");

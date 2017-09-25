@@ -11,7 +11,7 @@ The solution to this issue was an `ohh of course...` (or `/sigh`) moment but it 
  
 Here was the WebHostBuilder() problem code...
 
-```
+```cs
     public static void Main(string[] args)
     {
         var host = new WebHostBuilder()
@@ -31,13 +31,17 @@ UseUrls takes params string[], so you could pass in a collection of endpoints.
 
 Example:
 
-`UseUrls("http://localhost:8081","http[s]://127.0.0.1","http://[::1]")`
+```cs
+UseUrls("http://localhost:8081","http[s]://127.0.0.1","http://[::1]")
+```
 
 (note [::1] is the IPv6 loopback)
 
 or you can pass a single string with semi-colon delimited urls i.e.
 
-`UseUrls("http://localhost:8081;http[s]://127.0.0.1")`
+```cs
+UseUrls("http://localhost:8081;http[s]://127.0.0.1")
+```
 
 OK thats great, but why is the endpoint not serving requests when it is deployed?
 

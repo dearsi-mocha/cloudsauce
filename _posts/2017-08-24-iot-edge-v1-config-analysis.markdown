@@ -20,7 +20,7 @@ IoT Edge v1 as of this post date supports .NET Core, .NET, Java, Node.js and C.
 
 As an example, here I am defining two language bindings
 
-```
+```javascript
     "loaders": [
         {
             "type": "node",
@@ -49,7 +49,7 @@ Here is an example where I am defining 3 modules:
 - The native identity map which will translate device mac addresses to an Azure device.
 - A custom http data intake API. In my particular use case the devices are able to make http calls, so I need a module to provide the data receive endpoint.
 
-```
+```javascript
     "modules": [
         {
             "name": "IotHub",
@@ -105,7 +105,7 @@ This is describing input and output streams of target modules. Each object in li
 
 Example:
 
-```
+```javascript
     "links": [
         {
             "source": "dataapi",
@@ -120,7 +120,7 @@ Example:
 
 In the links example, data produced by the 'dataapi' (what is published to the broker) i.e in Javascript:
 
-```
+```cs
     broker.publish({
         // payload.properties.macAddress == '01:01:01:01:01:01'
         properties: payload.properties,

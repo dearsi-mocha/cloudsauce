@@ -14,7 +14,7 @@ One quite common scenario you might run into is the addition of >1 listener.
 
 Well in that case don't do this or you will have a bad time:
 
-```
+```cs
 return new List<ServiceReplicaListener>()
 {
     new ServiceReplicaListener( (context) => this.CreateServiceRemotingListener(context)),
@@ -41,7 +41,7 @@ With respect to the current version of the Azure Service Fabric SDK, make sure t
 
 Here is a more complete example using Kestrel with .NET Core:
 
-```
+```cs
 /// <summary>
 /// Optional override to create listeners (e.g., HTTP, Service Remoting, WCF, etc.) for this service replica to handle client or  user requests.
 /// </summary>
@@ -72,7 +72,7 @@ protected override IEnumerable<ServiceReplicaListener> CreateServiceReplicaListe
 
 And respective snippet from ServiceManifest.xml
 
-```
+```xml
 <Resources>
   <Endpoints>
     <!-- This endpoint is used by the communication listener to obtain the port on which to 
