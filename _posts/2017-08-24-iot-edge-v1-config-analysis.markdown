@@ -21,6 +21,7 @@ IoT Edge v1 as of this post date supports .NET Core, .NET, Java, Node.js and C.
 As an example, here I am defining two language bindings
 
 ```json
+{
     "loaders": [
         {
             "type": "node",
@@ -39,6 +40,10 @@ As an example, here I am defining two language bindings
             }
         }
     ]
+    
+    // Next section
+    // ...
+}
 ```
 
 Next there is the 'modules' collection. This is where you define your modules, module arguments, and module language bindings for Edge to load and execute.
@@ -50,6 +55,10 @@ Here is an example where I am defining 3 modules:
 - A custom http data intake API. In my particular use case the devices are able to make http calls, so I need a module to provide the data receive endpoint.
 
 ```json
+{
+    // Previous section
+    // ...
+
     "modules": [
         {
             "name": "IotHub",
@@ -97,6 +106,10 @@ Here is an example where I am defining 3 modules:
             "args": null
         }
     ]
+
+    // Next section
+    // ...
+}
 ```
 
 The final component of the Edge gateway config is the 'links' collection.
@@ -106,6 +119,10 @@ This is describing input and output streams of target modules. Each object in li
 Example:
 
 ```json
+{
+    // Previous section
+    // ...
+
     "links": [
         {
             "source": "dataapi",
@@ -116,6 +133,7 @@ Example:
             "sink": "IotHub"
         }
     ]
+}
 ```
 
 In the links example, data produced by the 'dataapi' (what is published to the broker) i.e in Javascript:
