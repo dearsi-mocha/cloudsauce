@@ -44,7 +44,7 @@ Now lets build a concrete class implementing the edge inteface. We will build ou
 
 You should have a .cs file that looks similar to this
 
-```cs
+```csharp
 using Microsoft.Azure.Devices.Gateway;
 
 public class ExampleAppEdge : IGatewayModule, IGatewayModuleStart
@@ -78,7 +78,7 @@ Let's circumvent that with a workaround which is to execute `IWebHost.Run()` in 
 
 So our Create now looks like 
 
-```cs
+```csharp
 public void Create(Broker broker, byte[] configuration)
 {
     Console.WriteLine("ExampleApp.Create called!");
@@ -94,7 +94,7 @@ You'll notice the `<Message>` type param the method expects. For receiving messa
 
 Here is a basic implementation of Receive, also taking advantage of async
 
-```cs
+```csharp
 public async void Receive(Message received_message)
 {
     Console.WriteLine("ExampleApp.Receive called!");

@@ -9,9 +9,9 @@ Quite recently, I was integrating some components for a platform project I was i
 
 The solution to this issue was an `ohh of course...` (or `/sigh`) moment but it did take a chunk of time to resolve - so maybe some others out there could use the info, or at least recache and consider it a refresher.
  
-Here was the WebHostBuilder() problem code...
+Here was the original WebHostBuilder() problem code...
 
-```cs
+```csharp
     public static void Main(string[] args)
     {
         var host = new WebHostBuilder()
@@ -31,7 +31,7 @@ UseUrls takes params string[], so you could pass in a collection of endpoints.
 
 Example:
 
-```cs
+```csharp
 UseUrls("http://localhost:8081","http[s]://127.0.0.1","http://[::1]")
 ```
 
@@ -39,7 +39,7 @@ UseUrls("http://localhost:8081","http[s]://127.0.0.1","http://[::1]")
 
 or you can pass a single string with semi-colon delimited urls i.e.
 
-```cs
+```csharp
 UseUrls("http://localhost:8081;http[s]://127.0.0.1")
 ```
 
@@ -51,10 +51,11 @@ This behavior is not unique to dotnet.
 
 In fact, typically you'd want your firewall to drop packets with destination 127.0.0.1 for security reasons.
 
-The **key** here is to set your address
-- to be the wildcard char `*` e.g. `http://*:8081` (bind to any IP address or host)
+The **key** here is to **set your address** to be one of the following (the port is an example and not important):
+- the wildcard char `*` e.g. `http://*:8081` (bind to any IP address or host)
 - `0.0.0.0` like `http://0.0.0.0:8081` (bind to all IPv4 addresses)
 - `[::]` like `http://[::]:8081` (bind to all IPv6 addresses)
+- Explicit routable endpoint(s) to listen on.
 
 
 Assuming your port mapping rules are correct (if you have any) that should solve the problem.
