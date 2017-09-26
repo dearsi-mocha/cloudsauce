@@ -51,7 +51,7 @@ This behavior is not unique to dotnet.
 
 In fact, typically you'd want your firewall to drop packets with destination 127.0.0.1 for security reasons.
 
-The key here is to set your address
+The **key** here is to set your address
 - to be the wildcard char `*` e.g. `http://*:8081` (bind to any IP address or host)
 - `0.0.0.0` like `http://0.0.0.0:8081` (bind to all IPv4 addresses)
 - `[::]` like `http://[::]:8081` (bind to all IPv6 addresses)

@@ -23,7 +23,7 @@ baseurl: "/cloudsauce" # the subpath of your site, e.g. /blog
 url: "https://digimaun.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  digimaun
 permalink: /:year/:month/:day/:title/
-google_analytics: UA-NNNNNNNN-N
+google_analytics: UA-107063339-1
 
 # Build settings
 markdown: kramdown
