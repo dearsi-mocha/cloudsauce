@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "dotnetcore 1.x endpoint routability with localhost binding"
+title:  "dotnet core 1.x endpoint routability with localhost binding"
 date:   2017-08-15 16:10:00 -0700
-categories: dotnetcore kestrel endpoint binding
+categories: dotnet kestrel endpoint binding
 ---
 
 Quite recently, I was integrating some components for a platform project I was involved with. Among the components was a dotnetcore web app which was exposing an API endpoint. The endpoint was binding and serving requests properly locally, but not when it was deployed in a container on the remote host.

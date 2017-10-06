@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "dotnetcore app integration with iot edge v1"
+title:  "dotnet core app integration with iot edge v1"
 date:   2017-08-21 16:10:00 -0700
-categories: dotnetcore integration iot edge v1
+categories: dotnet integration iot edge v1
 ---
 
 This post is dedicated in stepping through key elements that you need to replicate in your app in order to module-ize and integrate with the IoT Edge v1 gateway.
