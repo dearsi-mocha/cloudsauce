@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Azure API Management CLI woes...and workarounds"
-date:   2017-05-31 17:35:03 -0700
+date:   2020-04-22 17:35:03 -0700
 categories: azure apim azurecli cli api
 --- 
 
