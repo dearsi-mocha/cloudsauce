@@ -9,7 +9,7 @@ categories: azure apim azurecli cli api
 
 Here it is a small work around for the current bug when adding managed identity.
 
-```json
+```powershell
 az apim create --name $name `
                --publisher-email $publisher.email `
                --publisher-name $publisher.name `
