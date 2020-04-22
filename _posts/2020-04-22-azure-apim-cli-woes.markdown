@@ -7,9 +7,12 @@ categories: azure apim azurecli cli api
 
 ## Are you having issues with az apim create?
 
-This is some random text to show how this thing works
+Here it is a small work around for the current bug when adding managed identity.
 
-```python
-if __name__ == '__main__':
-  print('This is cool')
+```json
+az apim create --name $name `
+               --publisher-email $publisher.email `
+               --publisher-name $publisher.name `
+               -g $resourceGroup #--enable-managed-identity true
+az apim update --name $name -g $resourceGroup --enabled-managed-identity true
 ```
